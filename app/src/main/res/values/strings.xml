@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Accelerated Vision</string>
+
+    <!--TextView Labels-->
+    <string name="welcome">Welcome</string>
+    <string name="download">Download Trained Networks</string>
+
+    <!--BUTTON LABELS-->
+    <string name="collaborate_button">COLLABORATE</string>
+    <string name="collaborate_button_short">COLLABO</string>
+    <string name="start_button">START</string>
+
+    <!--OPTIONS LABELS-->
+    <string name="collaborate_options">Collaborate</string>
+    <string name="about_options">About</string>
+
+    <!--INFORMATION & ALERTS-->
+    <string name="download_title">Trained Network Download</string>
+    <string name="download_description">Downloading the trained CNN model into device.</string>
+    <string name="no_download">No download in progress</string>
+    <string name="download_started">Download Started</string>
+    <string name="download_completed">Network Download Completed</string>
+    <string name="network_not_exist">No Trained Network on Device</string>
+    <string name="play_store">Google Play Store</string>
+    <string name="copy_right">(C) 2018</string>
+    <string name="about_txt1">The Mobile Accelerated Vision Project is an implementation
+        of CNN for traffic sign recognition and detection on mobile devices, making use
+        of Neural Networks acceleration mechanisms provided by the Android NN API,
+        and other OpenCL functions.</string>
+    <string name="about_txt2">Don’t forget, you can take this app to an even better level
+        by collaborating with me on this project</string>
+    <string name="about_txt3">This app is distributed free on: </string>
+    <string name="about_txt4">Feel free to use and enjoy your use!</string>
+    <string name="stream_started">Live Streaming Started</string>
+    <string name="stream_stoped">Streaming Inactive</string>
+    <string name="instruction_1">Press Action Button To Start Streaming</string>
+
+
+    <!--URLs-->
+    <string name="network_address">https://github.com/OluwoleOyetoke/Deep-Learning-Assisted-Computer-Vision-System/raw/master/My%20Final%20Report%20-%20MSc%20Thesis.pdf</string>
+    <string name="project_git_hub">https://github.com/OluwoleOyetoke/Accelerated_Android_Vision</string>
+    <string name="local_network_directory">/Documents/Accelerated</string>
+    <string name="local_network_directory2">/Accelerated/Network.tfl</string>
+
+    <!-- FILE LABELS-->
+    <string name="network_file_name">Network.tfl</string>
+    <string name="title_activity_stream">StreamActivity</string>
+    <string name="title_activity_stream2">Realtime Inference</string>
+
+</resources>
