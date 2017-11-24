@@ -56,7 +56,7 @@ public class AboutActivity extends AppCompatActivity {
                     startActivity(playStoreIntent);
                 }
             } catch (android.content.ActivityNotFoundException anfe) {
-                Intent playStoreIntent = new Intent(ACTION_VIEW, uri2); //Use web browser
+                Intent playStoreIntent = new Intent(ACTION_VIEW, uri2); //Use web browser.
                 if (playStoreIntent.resolveActivity(getPackageManager()) != null) {         //Make sure package exists
                     startActivity(playStoreIntent);
                 }
