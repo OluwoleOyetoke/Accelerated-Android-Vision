@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.hardware.Camera;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
@@ -13,6 +14,8 @@ import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.Surface;
 import android.view.SurfaceHolder;
@@ -23,6 +26,8 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import java.io.IOException;
+
+import static android.content.Intent.ACTION_VIEW;
 
 public class StreamActivity extends AppCompatActivity implements SurfaceHolder.Callback  {
     //Variables declaration
@@ -100,6 +105,12 @@ public class StreamActivity extends AppCompatActivity implements SurfaceHolder.C
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
 
         onCreateFlag=1;
@@ -198,6 +209,36 @@ public class StreamActivity extends AppCompatActivity implements SurfaceHolder.C
             result = (info.orientation - degrees + 360) % 360;
         }
         return result;//Return the orientation we should set camera to
+    }
+
+
+    //Add menu
+    //Inflate Menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    //When any of the menu is clicked
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuitem) {
+        if(menuitem.getItemId()==R.id.about_options_id){
+            Intent aboutIntent = new Intent(this, AboutActivity.class);
+            startActivity(aboutIntent);//Go to the about activity page
+        }else if(menuitem.getItemId()==R.id.collaborate_options_id){
+            Uri uri = Uri.parse(getString(R.string.project_git_hub));
+            Intent collaborationIntent = new Intent(ACTION_VIEW, uri); //Use web browser to visit project Git Page
+            //Make sure package exists
+            if(collaborationIntent.resolveActivity(getPackageManager())!=null){
+                startActivity(collaborationIntent);
+            }
+        }
+        //else if(menuitem.getItemId()==android.R.id.home){
+          //  NavUtils.navigateUpFromSameTask(this);
+        //}
+        return true;
     }
 
 }

@@ -1,9 +1,12 @@
 package com.oluwoleoyetoke.acceleratedvision;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -19,7 +22,9 @@ public class AboutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
+
 
     //Inflate Menu
     @Override
@@ -63,4 +68,27 @@ public class AboutActivity extends AppCompatActivity {
             }
         }
     }
+
+
+    //Add menu
+    //When any of the menu is clicked
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuitem) {
+        if(menuitem.getItemId()==R.id.about_options_id && this.getClass()!=AboutActivity.class){
+            Intent aboutIntent = new Intent(this, AboutActivity.class);
+            startActivity(aboutIntent);//Go to the about activity page
+        }else if(menuitem.getItemId()==R.id.collaborate_options_id){
+            Uri uri = Uri.parse(getString(R.string.project_git_hub));
+            Intent collaborationIntent = new Intent(ACTION_VIEW, uri); //Use web browser to visit project Git Page
+            //Make sure package exists
+            if(collaborationIntent.resolveActivity(getPackageManager())!=null){
+                startActivity(collaborationIntent);
+            }
+        }else if(menuitem.getItemId()==android.R.id.home){
+            NavUtils.navigateUpFromSameTask(this);
+        }
+        return true;
+    }
+
+
 }

@@ -29,6 +29,7 @@ Controller control = new Controller();
         setContentView(R.layout.activity_main);
     }
 
+
     //Inflate Menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
