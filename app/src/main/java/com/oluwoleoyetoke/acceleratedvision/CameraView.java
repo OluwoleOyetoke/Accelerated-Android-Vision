@@ -19,7 +19,6 @@ public class CameraView extends SurfaceView implements SurfaceHolder.Callback {
     public CameraView(Context context, android.hardware.Camera camera){
         super(context);
         mCamera = camera;
-        mCamera.setDisplayOrientation(90);
         //get the holder and set this class as the callback, so we can get camera data here
         mHolder =getHolder();
         mHolder.addCallback(this);
@@ -30,6 +29,7 @@ public class CameraView extends SurfaceView implements SurfaceHolder.Callback {
     public void surfaceCreated(SurfaceHolder surfaceHolder) {
         try{
             //when the surface is created, we can set the camera to draw images in this surfaceholder
+            mCamera.setDisplayOrientation(0);
             mCamera.setPreviewDisplay(surfaceHolder);
             mCamera.startPreview();
         } catch (IOException e) {

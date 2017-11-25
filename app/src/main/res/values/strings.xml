@@ -34,6 +34,7 @@
     <string name="stream_started">Live Streaming Started</string>
     <string name="stream_stoped">Streaming Inactive</string>
     <string name="instruction_1">Press Action Button To Start Streaming</string>
+    <string name="orientation_changed">Orientation Changed</string>
 
 
     <!--URLs-->
