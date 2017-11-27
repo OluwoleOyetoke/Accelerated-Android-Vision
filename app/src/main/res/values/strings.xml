@@ -3,7 +3,7 @@
 
     <!--TextView Labels-->
     <string name="welcome">Welcome</string>
-    <string name="download">Download Trained Networks</string>
+    <string name="download">Download Trained Network(s)</string>
 
     <!--BUTTON LABELS-->
     <string name="collaborate_button">COLLABORATE</string>
@@ -31,15 +31,15 @@
         by collaborating with me on this project</string>
     <string name="about_txt3">This app is distributed free on: </string>
     <string name="about_txt4">Feel free to use and enjoy your use!</string>
-    <string name="stream_started">Live Streaming Started</string>
-    <string name="stream_stoped">Streaming Inactive</string>
-    <string name="instruction_1">Press Action Button To Start Streaming</string>
+    <string name="stream_started">Neural Network Operation/Streaming Started</string>
+    <string name="stream_stoped">Neural Network/Streaming Inactive</string>
+    <string name="instruction_1">Press Action Button To Start Neural Network</string>
     <string name="orientation_changed">Orientation Changed</string>
 
 
     <!--URLs-->
     <string name="network_address">https://github.com/OluwoleOyetoke/Deep-Learning-Assisted-Computer-Vision-System/raw/master/My%20Final%20Report%20-%20MSc%20Thesis.pdf</string>
-    <string name="project_git_hub">https://github.com/OluwoleOyetoke/Accelerated_Android_Vision</string>
+    <string name="project_git_hub">https://github.com/OluwoleOyetoke/Accelerated-Android-Vision</string>
     <string name="local_network_directory">/Documents/Accelerated</string>
     <string name="local_network_directory2">/Accelerated/Network.tfl</string>
 

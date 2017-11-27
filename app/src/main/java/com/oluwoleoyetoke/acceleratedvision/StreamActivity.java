@@ -1,16 +1,10 @@
 package com.oluwoleoyetoke.acceleratedvision;
 
 import android.content.Intent;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
 import android.hardware.Camera;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -21,10 +15,7 @@ import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.Toast;
-import android.widget.ToggleButton;
-
 import java.io.IOException;
 
 import static android.content.Intent.ACTION_VIEW;
@@ -37,7 +28,6 @@ public class StreamActivity extends AppCompatActivity implements SurfaceHolder.C
     private SurfaceHolder holder;
     private int cameraOrientation;
     private FloatingActionButton fab;
-    int onCreateFlag=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,9 +44,17 @@ public class StreamActivity extends AppCompatActivity implements SurfaceHolder.C
         Camera.CameraInfo cameraInfo = new Camera.CameraInfo();
         Camera.getCameraInfo(Camera.CameraInfo.CAMERA_FACING_BACK, cameraInfo);
         cameraOrientation = getCorrectCameraOrientation(cameraInfo, mCamera);
-        //cameraView.setClickable(true);// make the surface view clickable
-        //cameraView.setOnClickListener((View.OnClickListener) this);// onClicklistener to be called when the surface view is clicked
+        //Open camera and set orientation
+        try {
         mCamera = Camera.open();
+            if (mCamera != null) {
+                mCamera.setPreviewDisplay(holder);
+                mCamera.setDisplayOrientation(cameraOrientation);
+                mCamera.getParameters().setRotation(cameraOrientation);
+            }
+        } catch (Exception exception) {
+            Log.e("ERROR", "Camera error on surfaceCreated " + exception.getMessage());
+        }
 
 
 
@@ -66,28 +64,14 @@ public class StreamActivity extends AppCompatActivity implements SurfaceHolder.C
                 if (toggle == 0) {
                     toggle = 1;
                     fab.setImageResource(android.R.drawable.button_onoff_indicator_on); //change fab colour
-
-                    //Open Cmaera & Ask camera to draw image from camera on surfaceview
-                    try {
-
-                        if (mCamera != null) {
-                            mCamera.setPreviewDisplay(holder);
-                            mCamera.setDisplayOrientation(cameraOrientation);
-                            mCamera.getParameters().setRotation(cameraOrientation);
-                            mCamera.startPreview();
-                        }
-                    } catch (IOException exception) {
-                        Log.e("ERROR", "Camera error on surfaceCreated " + exception.getMessage());
-                    }
+                    mCamera.startPreview(); //Ask camera to draw image from camera on surfaceview
                     Toast.makeText(getBaseContext(), getString(R.string.stream_started), Toast.LENGTH_SHORT).show(); //Notify user about starting stream
                 } else if (toggle == 1) {
                     toggle = 0;
                     fab.setImageResource(android.R.drawable.button_onoff_indicator_off);
-                    //Release camera when we leave the view
-                    mCamera.stopPreview();
+                    mCamera.stopPreview(); //Release camera when we leave the view
                     Toast.makeText(getBaseContext(), getString(R.string.stream_stoped), Toast.LENGTH_SHORT).show(); //Notify user about stream being off
                 }
-                //snackbar
             }
         });
 
@@ -95,7 +79,6 @@ public class StreamActivity extends AppCompatActivity implements SurfaceHolder.C
             Toast.makeText(getBaseContext(), getString(R.string.instruction_1), Toast.LENGTH_LONG).show();
         }else{
             //do nothing
-
         }
 
         // Add back <-- navigation to stream activity toolbar
@@ -111,9 +94,6 @@ public class StreamActivity extends AppCompatActivity implements SurfaceHolder.C
                 onBackPressed();
             }
         });
-
-
-        onCreateFlag=1;
     }
 
     //Save variables before activity kill/screen orientation change
@@ -235,9 +215,6 @@ public class StreamActivity extends AppCompatActivity implements SurfaceHolder.C
                 startActivity(collaborationIntent);
             }
         }
-        //else if(menuitem.getItemId()==android.R.id.home){
-          //  NavUtils.navigateUpFromSameTask(this);
-        //}
         return true;
     }
 

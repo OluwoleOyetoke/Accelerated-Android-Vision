@@ -40,7 +40,6 @@
         android:layout_width="wrap_content"
         android:layout_height="32dp"
         android:layout_marginBottom="52dp"
-        android:fontFamily="@font/elsie_swash_caps"
         android:onClick="onClickDownloadTrainedNet"
         android:text="@string/download"
         android:textColor="@color/colorPrimary"
