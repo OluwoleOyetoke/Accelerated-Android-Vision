@@ -23,7 +23,7 @@ This project implements a mobile phone-based traffic sign detection and recognit
 assisted by a Convolutional Neural Network (CNN). Adequate effort is made to utilize
 heterogeneous computing as much as possible through the newly released Android Neural
 Networks API which intelligently distributes computationally intensive Neural Networks (NN)
-tasks to any available onboard accelerator (GPU/NN Accelerator).
+tasks to any available onboard accelerator (GPU/NN Accelerator). [The Neural Network portion of the project can be found here] (https://github.com/OluwoleOyetoke/Computer_Vision_Using_TensorFlowLite)
 
 The CNN is first trained with the German Traffic Sign Recognition Benchmark (GTSRB) training
 database using Tensor Flow. The trained model is then embedded within the mobile device
