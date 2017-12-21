@@ -1,5 +1,5 @@
 # Accelerated-Android-Vision
-This project implements a mobile phone based traffic sign detection and recognition system assisted by a Convolutional Neural Network (CNN). Adequate effort is made to utilize heterogeneous computing as much as possible through the newly released Android Neural Networks API which intelligently distribute computationally intensive Neural Networks (NN) tasks to any available onboard accelerator (GPU/NN Accelerator).
+This project implements a mobile phone based traffic sign detection and recognition system assisted by a Convolutional Neural Network (CNN). Adequate effort is made to utilize heterogeneous computing as much as possible through the newly released *Android Neural Networks API* which is capable of intelligently distributing computationally intensive Neural Networks (NN) tasks to different available onboard accelerators such as GPUs, DSPs and FPGAs.
 
 
 ## 1.0 INTRODUCTION
@@ -37,7 +37,7 @@ Implement a fast-mobile vision app for traffic sign detection and classification
 
 
 ## 3.0 PROJECT DEFINITION
-Essentially, the implementation of this project involved the buildong a very easy to navigate Android APP which interacts with captured video frames from a mobile device’s camera and performs Neural Networks classification operation. The apps interactivity with the trained CNN network model is made possibel through TensorFlowLite and the Android NN API. In the near future, some critical  CNN use cases and detection functions will be implemented in OpenCL.
+Essentially, the implementation of this project involves the building of a very easy to navigate Android App which interacts with captured video frames from a mobile device’s camera and performs Neural Networks classification operation. The apps interactivity with the trained CNN model is made possibel through TensorFlowLite and the Android NN API. In the near future, some critical  CNN use cases and detection functions will be implemented in OpenCL.
 
 ## 4.0 SOFTWARE DESIGN
 The sections below provide more details on the Apps GUI and operation flow
