@@ -67,3 +67,4 @@ The Neural Networks part of this project is implemented [here](https://github.co
 [**Compressed Rounded TFLite Model**](https://www.dropbox.com/s/bxgiz3w22wwz2wp/rounded_tflite_model_compressed.zip?dl=0)
 
 #### 5.2 APP IMPLEMENTATION
+![GUI Implementation](https://github.com/OluwoleOyetoke/Accelerated-Android-Vision/blob/master/app/sampledata/GUI3.png)
