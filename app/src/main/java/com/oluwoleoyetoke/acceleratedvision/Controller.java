@@ -46,7 +46,7 @@ public class Controller {
         boolean result=false;
         for(int i=0; i<contents.length; i++){
             fileName = contents[i].getName();
-            if(fileName.contains("Network.tfl")){ //If file with the name Network.tfl exist
+            if(fileName.contains("Network.lite")){ //If file with the name Network.lite exist
                 result = true;
                 break; //exit for loop
             }

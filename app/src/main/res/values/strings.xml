@@ -38,13 +38,13 @@
 
 
     <!--URLs-->
-    <string name="network_address">https://github.com/OluwoleOyetoke/Deep-Learning-Assisted-Computer-Vision-System/raw/master/My%20Final%20Report%20-%20MSc%20Thesis.pdf</string>
+    <string name="network_address">https://www.dropbox.com/s/7vqir0rzvx2zgbx/normal_tflite_model.lite?dl=0</string>
     <string name="project_git_hub">https://github.com/OluwoleOyetoke/Accelerated-Android-Vision</string>
     <string name="local_network_directory">/Documents/Accelerated</string>
     <string name="local_network_directory2">/Accelerated/Network.tfl</string>
 
     <!-- FILE LABELS-->
-    <string name="network_file_name">Network.tfl</string>
+    <string name="network_file_name">Network.lite</string>
     <string name="title_activity_stream">StreamActivity</string>
     <string name="title_activity_stream2">Realtime Inference</string>
 

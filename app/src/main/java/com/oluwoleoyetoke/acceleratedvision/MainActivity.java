@@ -68,7 +68,7 @@ Controller control = new Controller();
         if(folderExists){
             boolean filesExist = control.checkIfFileExists(appNetworkStorage);
             if(filesExist){
-                networkFileExists = control.checkIfNetworkFileExists(appNetworkStorage); //Check if file is Network.tfls
+                networkFileExists = control.checkIfNetworkFileExists(appNetworkStorage); //Check if file is Network.lite
             }
         }
 
@@ -105,7 +105,7 @@ Controller control = new Controller();
         if(folderExists){
             boolean filesExist = control.checkIfFileExists(appNetworkStorage);
             if(filesExist){
-                networkFileExists = control.checkIfNetworkFileExists(appNetworkStorage); //Check if file is Network.tfls
+                networkFileExists = control.checkIfNetworkFileExists(appNetworkStorage); //Check if file is Network.lite
             }
         }
         if(networkFileExists==false){

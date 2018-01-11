@@ -40,7 +40,7 @@ public class NeuralNetworks {
         DownloadManager.Request request = new DownloadManager.Request(uri);
 
         //Direct download to save into user's 'Document' folder
-        //request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOCUMENTS, "Accelerated/Network.tfl");
+        //request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOCUMENTS, "Accelerated/Network.lite");
         request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOCUMENTS, context.getString(R.string.local_network_directory2));
 
         // Allow media devices to scan through it
