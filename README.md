@@ -61,13 +61,10 @@ detection and classification
 #### 5.1 Neural Networks Implementation
 The Neural Networks part of this project is implemented [here](https://github.com/OluwoleOyetoke/Computer_Vision_Using_TensorFlowLite). To download the tf_lite_model suitable for your use, use the link below. Note that these models are not quantized, as such, they still maintain a high level of accuracy but are large in size. For more details on the difference between the rounded and unrounded version, [check here](https://github.com/OluwoleOyetoke/Computer_Vision_Using_TensorFlowLite#step-81-sample-transform-definition-and-a-little-bit-of-explanation)
 
-[**Normal TFLite Model**](https://www.dropbox.com/s/7vqir0rzvx2zgbx/normal_tflite_model.lite?dl=0)
-
-[**Compressed Normal TFLite Model**](https://www.dropbox.com/s/1vzzzeecevk63l7/normal_tflite_model_compressed.zip?dl=0)
-
-[**Rounded TFLite Model**](https://www.dropbox.com/s/knwlq4m6gpyerl2/rounded_tflite_model.lite?dl=0)
-
-[**Compressed Rounded TFLite Model**](https://www.dropbox.com/s/bxgiz3w22wwz2wp/rounded_tflite_model_compressed.zip?dl=0)
+* [**Normal TFLite Model**](https://www.dropbox.com/s/7vqir0rzvx2zgbx/normal_tflite_model.lite?dl=0)
+* [**Compressed Normal TFLite Model**](https://www.dropbox.com/s/1vzzzeecevk63l7/normal_tflite_model_compressed.zip?dl=0)
+* [**Rounded TFLite Model**](https://www.dropbox.com/s/knwlq4m6gpyerl2/rounded_tflite_model.lite?dl=0)
+* [**Compressed Rounded TFLite Model**](https://www.dropbox.com/s/bxgiz3w22wwz2wp/rounded_tflite_model_compressed.zip?dl=0)
 
 #### 5.2 APP IMPLEMENTATION
 ![GUI Implementation](https://github.com/OluwoleOyetoke/Accelerated-Android-Vision/blob/master/app/sampledata/GUI3_rsz.png)
